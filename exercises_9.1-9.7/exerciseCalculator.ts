@@ -25,12 +25,12 @@ const parseArgumentsExercise = (args: Array<string>) =>{
 }
 
 const calculateExercises = (trainingList: any[], tgt: number): Results => {
-    let trainingDayCount = 0
+    let trainingDayCount = 0;
     const sum = trainingList.reduce((a, b) => a + b, 0);
-    const avg = sum / trainingList.length
-    let suc
-    let desc
-    let rate
+    const avg = sum / trainingList.length;
+    let suc;
+    let desc = '';
+    let rate = 0;
 
     if (avg * 2 < tgt) {
         desc = 'There is a lot room for improvement'
