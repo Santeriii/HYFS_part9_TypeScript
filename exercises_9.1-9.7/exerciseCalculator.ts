@@ -8,6 +8,22 @@ interface Results {
     average: number;
 }
 
+const parseArgumentsExercise = (args: Array<string>) =>{
+    if (args.length < 5) throw new Error('Not enough arguments');
+
+    for (let i = 2; i < args.length; i++) {
+        if (isNaN(Number(args[i]))) {
+            throw new Error('Provided values were not numbers!')
+        }
+    }
+
+    args.shift();
+    args.shift();
+
+
+    return args
+}
+
 const calculateExercises = (trainingList: any[], tgt: number): Results => {
     let trainingDayCount = 0
     const sum = trainingList.reduce((a, b) => a + b, 0);
@@ -51,7 +67,9 @@ const calculateExercises = (trainingList: any[], tgt: number): Results => {
 }
 
 try {
-    console.log(calculateExercises([3, 0, 2, 4.5, 0, 3, 1], 1))
+    const input = parseArgumentsExercise(process.argv)
+    const targ = 2
+    console.log(calculateExercises(input, targ))
 } catch (e) {
     console.log('Something went wrong, here is the error message: ', e.message);
 }
