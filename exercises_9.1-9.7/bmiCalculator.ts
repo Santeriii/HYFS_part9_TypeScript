@@ -1,13 +1,9 @@
-type Result = string;
-
 interface heightAndWeight {
     height: number;
     weight: number;
 }
 
-type BMI = number;
-
-const parseArguments = (args: Array<string>): heightAndWeight => {
+export const parseArguments = (args: Array<string>): heightAndWeight => {
     if (args.length < 4) throw new Error('Not enough arguments');
     if (args.length > 4) throw new Error('Too many arguments')
 
@@ -21,15 +17,14 @@ const parseArguments = (args: Array<string>): heightAndWeight => {
     }
 }
 
-const calculateBmi = (height: number, weight: number) => {
+export const calculateBmi = (height: number, weight: number) => {
     height = height / 100;
     const bmi = weight / (height * height);
-    console.log(bmi)
     if (bmi < 18.5) {
         return 'Underweight'
     } else if (bmi >= 18.5 && bmi <= 24.9) {
         return 'Normal (healthy weight)'
-    } else if (bmi > 24.9) {
+    } else {
         return 'Overweight'
     }
 }
