@@ -1,0 +1,21 @@
+{
+  "name": "hyfs_part9_typescript",
+  "version": "1.0.0",
+  "description": "typescript application for Full Stack Open 2020 -course",
+  "main": "index.js",
+  "scripts": {
+    "test": "empty",
+    "ts-node": "ts-node",
+    "calculate": "ts-node multiplier.ts"
+  },
+  "keywords": [
+    "TypeScript"
+  ],
+  "author": "Santeri",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^14.14.20",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}
