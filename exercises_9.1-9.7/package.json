@@ -1,0 +1,19 @@
+{
+  "name": "exercises_9.1-9.7",
+  "version": "1.0.0",
+  "description": "exercises from 9.1 to 9.7 (HYFS)",
+  "main": "index.js",
+  "scripts": {
+    "test": "empty",
+    "ts-node": "ts-node"
+  },
+  "keywords": [
+    "TypeScript"
+  ],
+  "author": "Santeri",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}
